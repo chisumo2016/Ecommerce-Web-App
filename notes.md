@@ -26,11 +26,11 @@
         php artisan make:controller  Admin/DashboardController
 
     ISSUE
-     When youu log in as user the url (http://ecoommerce-web.test/dashboard) is alsoo access the url of http://ecoommerce-web.test/admin/dashboard
+     When youu log in as user the url (http://ecoommerce-web.test/dashboard) is also access the url of http://ecoommerce-web.test/admin/dashboard
        It will take to admin which is wrong.    
-    SOLUTIN
+    SOLUTION
     To write the code for middleware to protect the route access
-    php artisan make:middleware AAdmin
+    php artisan make:middleware Admin
     Register middlware 
     Apply to web route
 
@@ -42,9 +42,18 @@
                     modified:   resources/views/auth/register.blade.php
                     modified:   routes/web.php
 
-                     app/Http/Controllers/Admin/
+                    app/Http/Controllers/Admin/
                     app/Http/Middleware/
                     notes.md
                     resources/views/admin/
             
     
+# INTEGRATE HTML TEMPLATE IN LARAVEL PROJECT
+    https://github.com/yaminshakil/ecom_project
+    modified:   app/Http/Controllers/Auth/NewPasswordController.php
+	modified:   notes.md
+	modified:   routes/web.php
+
+    app/Http/Controllers/Front/
+	public/front-end/
+	resources/views/front-end/
