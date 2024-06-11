@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CategoryRequest;
 use App\Http\Requests\CategoryUpdateRequest;
 use App\Models\Category;
+use Flasher\Laravel\Facade\Flasher;
 use Illuminate\Http\Request;
+
 
 class CategoryController extends Controller
 {
@@ -35,7 +37,12 @@ class CategoryController extends Controller
     {
         $category = Category::create($request->validated());
 
-        return  redirect()->route('categories.index')->with('success', 'Category Created Successfully');}
+        Flasher::addSuccess('Category Created Successfully!');
+
+        return  redirect()->route('categories.index');
+        //return  redirect()->route('categories.index')->with('success', 'Category Created Successfully');}
+    }
+
 
     /**
      * Display the specified resource.
@@ -60,7 +67,10 @@ class CategoryController extends Controller
     public function update(CategoryUpdateRequest $request, Category $category)
     {
         $category->update($request->validated());
-        return redirect()->route('categories.index')->with('success', 'Category updated successfully.');
+
+        Flasher::addWarning('Category updated successfully!');
+
+        return redirect()->route('categories.index');
     }
 
     /**
@@ -69,6 +79,9 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         $category->delete();
-        return redirect()->route('categories.index')->with('success', 'Category deleted successfully.');
+
+        Flasher::addWarning('Category deleted successfully.!');
+
+        return redirect()->route('categories.index');
     }
 }

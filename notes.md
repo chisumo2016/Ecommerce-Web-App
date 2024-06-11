@@ -62,3 +62,13 @@
     https://github.com/yaminshakil/Admin_Template
 
 # ADDING CATEGORY FROM ADMIN DASHBOARD
+    CRUD Complete
+
+# SHOW TOASTR MESSAGE IN LARAVEL
+    https://php-flasher.io/library/toastr/
+        composer require php-flasher/flasher-toastr-laravel
+        php artisan vendor:publish --tag=flasher-config
+        
+        use Flasher\Laravel\Facade\Flasher;
+
+        Flasher::addSuccess('Success message!');
