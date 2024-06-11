@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 
 use App\Http\Controllers\Front\HomeController;
@@ -19,5 +20,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('admin/dashboard', [DashboardController::class, 'index'])->middleware(['auth','admin']);
+Route::resource('admin/categories', CategoryController::class)->middleware(['auth','admin']);
 
 require __DIR__.'/auth.php';

@@ -60,3 +60,5 @@
 
 # INTEGRATE ADMIN TEMPLATE IN LARAVEL PROJECT
     https://github.com/yaminshakil/Admin_Template
+
+# ADDING CATEGORY FROM ADMIN DASHBOARD
