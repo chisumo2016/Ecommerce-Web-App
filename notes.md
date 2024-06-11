@@ -57,3 +57,6 @@
     app/Http/Controllers/Front/
 	public/front-end/
 	resources/views/front-end/
+
+# INTEGRATE ADMIN TEMPLATE IN LARAVEL PROJECT
+    https://github.com/yaminshakil/Admin_Template
