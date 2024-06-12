@@ -34,27 +34,37 @@
                 </li>
             </ul>
             <div class="user_option">
-                <a href="{{ url('login') }}">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                    <span>
-                Login
-              </span>
-                </a>
+                @if (Route::has('login'))
+                    @auth
+                        <!-- Shopping cart bag -->
+                        <a href="">
+                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                        </a>
+                        <!-- Authentication -->
+                        <form method="POST" action="{{ route('logout') }}" style="padding: 15px;">
+                            @csrf
+                            <input type="submit"  class="btn btn-success" value="logout">
+                        </form>
+                    @else
 
-                <a href="{{ url('register') }}">
-                    <i class="fa fa-vcard" aria-hidden="true"></i>
-                    <span>
-                Register
-              </span>
-                </a>
-                <a href="">
-                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                </a>
-                <form class="form-inline ">
-                    <button class="btn nav_search-btn" type="submit">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                    </button>
-                </form>
+                        <a href="{{ url('login') }}">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <span>Login</span>
+                         </a>
+
+                        <a href="{{ url('register') }}">
+                            <i class="fa fa-vcard" aria-hidden="true"></i>
+                            <span>Register</span>
+                        </a>
+
+                    @endauth
+                @endif
+
+{{--                <form class="form-inline ">--}}
+{{--                    <button class="btn nav_search-btn" type="submit">--}}
+{{--                        <i class="fa fa-search" aria-hidden="true"></i>--}}
+{{--                    </button>--}}
+{{--                </form>--}}
             </div>
         </div>
     </nav>

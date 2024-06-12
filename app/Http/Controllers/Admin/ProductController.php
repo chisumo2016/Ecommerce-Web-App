@@ -141,7 +141,8 @@ class ProductController extends Controller
 
         // Perform the search query using Eloquent
         $products = Product::where('name', 'LIKE', '%' . $searchQuery . '%')
-            ->orWhere('name', 'LIKE', '%' . $searchQuery . '%')->paginate(3);
+            ->orWhere('name', 'LIKE', '%' . $searchQuery . '%')
+            ->paginate(3);
 
         // Pass the search results to the view
         return view('admin.products.index', ['products' => $products]);

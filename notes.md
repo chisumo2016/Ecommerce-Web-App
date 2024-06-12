@@ -94,3 +94,12 @@
          <td>{{ $product->description }}</td>
 
             <td>{!! Str::limit($product->description , 50) !!}</td>
+
+# SEARCH FUNCTIONALITY
+
+# HOW TO REDIRECT USER  TO DIFFERENT PAGE AFTER LOGIN 
+    - Work on front end  part of the application 
+    - Logout from admin section
+    - Redirect  the user to the same page when login
+       email: user@mailinator.com
+       password: admin1234
