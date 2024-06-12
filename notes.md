@@ -81,3 +81,8 @@
 
 # PRODUCT  CRUD TO DATABASE TABLE 
     php artisan make:model Product -mcrf
+    php artisan make:seeder ProductSeeder
+    php artisan make:request ProductStoreRequest
+    php artisan make:request ProductUpdateRequest
+
+# PAGINATION ON PRODUCT

@@ -54,6 +54,8 @@
                                 @endforeach
                                 </tbody>
                             </table>
+
+                            {{ $products->onEachSide(1)->links() }}
                         </div>
                     </div>
                 </div>
