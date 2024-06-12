@@ -86,3 +86,11 @@
     php artisan make:request ProductUpdateRequest
 
 # PAGINATION ON PRODUCT
+     $products = Product::paginate(3);
+     {{ $products->onEachSide(1)->links() }}
+    Paginator::useBootstrap();
+
+# HOW TO SHOW SHORT DESCRIPTION
+         <td>{{ $product->description }}</td>
+
+            <td>{!! Str::limit($product->description , 50) !!}</td>

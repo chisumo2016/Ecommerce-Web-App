@@ -33,7 +33,7 @@
                                     <th scope="row">{{ $product->id }}</th>
                                     <td>{{ $product->name }}</td>
                                     <td>{{ $product->category->name }}</td>
-                                    <td>{{ $product->description }}</td>
+                                    <td>{!! Str::limit($product->description , 50) !!}</td>
                                     <td>
                                         @if($product->image)
                                             <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="img-fluid" style="max-width: 100px; max-height: 100px;">
