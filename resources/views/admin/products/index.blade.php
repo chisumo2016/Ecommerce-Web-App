@@ -6,11 +6,37 @@
             <div class="row">
 
                 <div class="col-lg-12">
+
                     <div class="block margin-bottom-sm">
                             <div class="title"><strong>View Products</strong></div>
                         <a href="{{ route('products.create') }}" class="btn btn-primary float-right">
                             Add Product
                         </a>
+
+                        <div class="search-panel">
+                            <div class="col-md-6">
+                                <form action="{{ route('search') }}" method="get">
+                                    @csrf
+                                    <div class="form-group row">
+                                        <div class="col-md-6">
+                                            <input
+                                                type="search"
+                                                name="search"
+                                                class="form-control @error('search') is-invalid @enderror"
+                                                placeholder="What are you searching for..."
+                                                value="{{ old('search') }}">
+
+                                            @error('search')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button type="submit" class="btn btn-secondary btn-sm">Search</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
 
                         <div class="table-responsive">
                             <table class="table">

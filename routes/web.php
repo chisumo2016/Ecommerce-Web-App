@@ -23,5 +23,6 @@ Route::middleware('auth')->group(function () {
 Route::get('admin/dashboard', [DashboardController::class, 'index'])->middleware(['auth','admin']);
 Route::resource('admin/categories', CategoryController::class)->middleware(['auth','admin']);
 Route::resource('admin/products', ProductController::class)->middleware(['auth','admin']);
+Route::get('search' , [ProductController::class, 'search'])->name('search');
 
 require __DIR__.'/auth.php';

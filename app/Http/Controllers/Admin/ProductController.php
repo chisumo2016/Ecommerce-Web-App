@@ -129,5 +129,22 @@ class ProductController extends Controller
         return redirect()->route('products.index');
     }
 
+    public function search(Request $request)
+    {
+        // Validate the search query
+        $request->validate([
+            'search' => 'required|string|min:3',
+        ]);
+
+        // Get the search query from the request
+        $searchQuery = $request->input('search');
+
+        // Perform the search query using Eloquent
+        $products = Product::where('name', 'LIKE', '%' . $searchQuery . '%')
+            ->orWhere('name', 'LIKE', '%' . $searchQuery . '%')->paginate(3);
+
+        // Pass the search results to the view
+        return view('admin.products.index', ['products' => $products]);
+    }
 
 }
