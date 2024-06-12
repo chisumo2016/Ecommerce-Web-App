@@ -63,6 +63,12 @@
 
 # ADDING CATEGORY FROM ADMIN DASHBOARD
     CRUD Complete
+    php artisan make:model Category -mcrf
+    php artisan make:factory CategoryFactory --model=Category
+    php  artisan make:seeder CategorySeeder
+    php artisan db:seed --class=CategorySeeder
+    php artisan make:request CategoryRequest
+    php artisan make:request CategoryUpdateRequest
 
 # SHOW TOASTR MESSAGE IN LARAVEL
     https://php-flasher.io/library/toastr/
@@ -72,3 +78,6 @@
         use Flasher\Laravel\Facade\Flasher;
 
         Flasher::addSuccess('Success message!');
+
+# PRODUCT  CRUD TO DATABASE TABLE 
+    php artisan make:model Product -mcrf
