@@ -5,13 +5,15 @@
 @include('front-end.partials._head')
 
 <body>
+
 <div class="hero_area">
     <!-- header section strats -->
     @include('front-end.partials._header')
     <!-- end header section -->
     <!-- slider section -->
+    @if(!Request::routeIs('product.details'))
     @include('front-end.partials._slider')
-
+    @endif
     <!-- end slider section -->
 </div>
 <!-- end hero area -->
@@ -23,8 +25,10 @@
 <!-- end shop section -->
 
 <!-- contact section -->
-
+@if(!Request::routeIs('product.details'))
 @include('front-end.partials._contact')
+@endif
+
 <br><br><br>
 
 <!-- end contact section -->

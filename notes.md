@@ -103,3 +103,11 @@
     - Redirect  the user to the same page when login
        email: user@mailinator.com
        password: admin1234
+
+# DISPLAYING PRODUCT DATA IN HOMEPAGE 
+    - log as normal user  ,you will gett an error ,solutiion is fix on web route
+        http://ecoommerce-web.test/dashboard
+        Undefined variable $products
+
+#  DISPLAY PRODUCT DETAILS IN LARAVEL PROJECT
+    - Add the Button

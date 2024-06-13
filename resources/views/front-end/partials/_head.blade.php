@@ -24,4 +24,5 @@
     <link href="{{ asset('front-end/css/style.css') }}" rel="stylesheet" />
     <!-- responsive style -->
     <link href="{{ asset('front-end/css/responsive.css') }}" rel="stylesheet" />
+
 </head>
