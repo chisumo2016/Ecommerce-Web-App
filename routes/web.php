@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\CartController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
-
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\ProfileController;
@@ -28,5 +28,7 @@ Route::resource('admin/categories', CategoryController::class)->middleware(['aut
 Route::resource('admin/products', ProductController::class)->middleware(['auth','admin']);
 
 Route::get('search' , [ProductController::class, 'search'])->name('search');
+
+Route::get('add_cart/{product}', [CartController::class,'cart'])->middleware(['auth','verified'])->name('add.cart');
 
 require __DIR__.'/auth.php';

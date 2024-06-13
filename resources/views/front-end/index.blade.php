@@ -23,8 +23,9 @@
                                     <h6>{{ $product->name }}</h6>
                                     <h6>Price<span> ${{ $product->price }}</span></h6>
                                 </div>
-                            <div>
-                                <a href="{{ route('product.details', $product) }}" class="btn btn-success m-3">Show Details</a>
+                            <div class="d-flex justify-content-start">
+                                <a href="{{ route('product.details', $product) }}" class="btn btn-success btn-sm m-1 ">Show Details</a>
+                                <a href="{{ route('add.cart', $product) }}" class="btn btn-danger btn-sm  m-1">Add To Cart</a>
                             </div>
                         </div>
                     </div>

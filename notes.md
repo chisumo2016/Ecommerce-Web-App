@@ -111,3 +111,43 @@
 
 #  DISPLAY PRODUCT DETAILS IN LARAVEL PROJECT
     - Add the Button
+
+# HOW TO ADD PRODUCT TO CART 
+    - user will click the Add to Cart Button
+    - User must be logged in .
+    - Make the model of Cart
+    - foreign id - user_id
+        $table->foreignId('user_id')->constrained()->onDelete('cascade');
+    - foreign id - product_id
+
+             $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('product_id')->constrained()->onDelete('cascade');
+    -Add the relationships 
+    - To add the cart , user must be loged in .
+    - Other wise it will send the user to the loggin page
+    - We  need to get the product-id to add to  cart
+    - Track the product id
+    - Track the user id who added the product to the cart
+            
+            LONG CODE
+
+                        $user = Auth::user();
+                        $user_id = $user->id;
+                
+                        // Now you have the $product instance directly
+                        $product_id = $product->id;
+                
+                        $cart = new Cart;
+                        $cart->user_id =  $user_id ;
+                        $cart->product_id =  $product_id ;
+                
+                        $cart->save();
+
+            SHORT VERSION
+                    Auth::user()->carts()->create([
+                        'product_id' => $product->id,
+                    ]);
+            
+                    Flasher::addSuccess('Product Added to the Cart Created Successfully!');
+                    return redirect()->back();
+                
