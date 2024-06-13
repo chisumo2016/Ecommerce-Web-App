@@ -151,3 +151,14 @@
                     Flasher::addSuccess('Product Added to the Cart Created Successfully!');
                     return redirect()->back();
                 
+# SHOW TOTAL NUMBER OF PRODUCT ADDED TO THE CART FOR A USER
+    - Show number of  product added to the cart in UI
+    - Login as user 
+    - To write the logic in HomeController to count the number of product
+    - If you access the detail page , u get Undefined variable $count
+    - If you logout you get an error Attempt to read property "id" on null
+                Attempt to read property "id" on null
+        When u logout ,there's no login user .
+
+            $userId = Auth::user()->id;
+            $count = Cart::where('user_id', $userId)->count();

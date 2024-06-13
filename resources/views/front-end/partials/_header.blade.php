@@ -38,7 +38,7 @@
                     @auth
                         <!-- Shopping cart bag -->
                         <a href="">
-                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                            <i class="fa fa-shopping-bag" aria-hidden="true">({{ $count }})</i>
                         </a>
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}" style="padding: 15px;">
