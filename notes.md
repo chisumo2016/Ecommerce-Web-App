@@ -182,3 +182,11 @@
         modified:   routes/web.php
 
          resources/views/front-end/myCart.blade.php
+
+# HOW  TO DISPLAY TOTAL PRICE FOR A CART 
+        modified:   app/Http/Controllers/Admin/CartController.php
+        modified:   notes.md
+        modified:   resources/views/front-end/myCart.blade.php
+        modified:   routes/web.php
+
+

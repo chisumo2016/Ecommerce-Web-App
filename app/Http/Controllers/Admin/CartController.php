@@ -33,4 +33,15 @@ class CartController extends Controller
         }
         return  view('front-end.myCart', compact('count','carts'));
     }
+
+    public function destroy(Cart $cart)
+    {
+        // Delete the cart item
+        $cart->delete();
+
+        // Redirect back to the cart page with a success message
+
+        Flasher::addSuccess('Product removed from cart successfully.');
+        return redirect()->back();
+    }
 }
