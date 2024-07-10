@@ -37,7 +37,7 @@
                 @if (Route::has('login'))
                     @auth
                         <!-- Shopping cart bag -->
-                        <a href="">
+                        <a href="{{ route('mycart') }}">
                             <i class="fa fa-shopping-bag" aria-hidden="true">({{ $count }})</i>
                         </a>
                         <!-- Authentication -->

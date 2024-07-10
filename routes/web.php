@@ -30,5 +30,6 @@ Route::resource('admin/products', ProductController::class)->middleware(['auth',
 Route::get('search' , [ProductController::class, 'search'])->name('search');
 
 Route::get('add_cart/{product}', [CartController::class,'cart'])->middleware(['auth','verified'])->name('add.cart');
+Route::get('mycart', [CartController::class,'myCart'])->middleware(['auth','verified'])->name('mycart');
 
 require __DIR__.'/auth.php';

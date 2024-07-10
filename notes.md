@@ -1,4 +1,6 @@
 # ECOMMERCCE APPLICATION
+    https://fajarwz.com/blog/laravel-10-crud-and-image-upload-tutorial-with-laravel-breeze-and-repo-example/
+
     Make Multiple Authentication in Laravel using Breeze 
         . Admin  will go to  different dashboard afer login
                 admin1234
@@ -162,3 +164,21 @@
 
             $userId = Auth::user()->id;
             $count = Cart::where('user_id', $userId)->count();
+
+    NB:
+    we are already logged in as admin and again perform artisan serve ....
+    then after login as admin it is taking us to the url /dashboard.....
+    every time i need to customize the url like admin/dashboard...please fix the issue
+
+# SHOW PRODUCT CART DATA USING FK 
+    - View mycart 
+        user_id and product_id
+
+        modified:   app/Http/Controllers/Admin/CartController.php
+        modified:   app/Models/Cart.php
+        modified:   notes.md
+        modified:   resources/views/front-end/layouts/master.blade.php
+        modified:   resources/views/front-end/partials/_header.blade.php
+        modified:   routes/web.php
+
+         resources/views/front-end/myCart.blade.php

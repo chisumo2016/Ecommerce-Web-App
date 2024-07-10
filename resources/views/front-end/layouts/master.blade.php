@@ -25,7 +25,7 @@
 <!-- end shop section -->
 
 <!-- contact section -->
-@if(!Request::routeIs('product.details'))
+@if(!Request::routeIs('product.details','my.cart'))
 @include('front-end.partials._contact')
 @endif
 

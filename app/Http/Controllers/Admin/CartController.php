@@ -20,4 +20,17 @@ class CartController extends Controller
         Flasher::addSuccess('Product Added to the Cart Created Successfully!');
         return redirect()->back();
     }
+
+    public function myCart()
+    {
+        $count = 0;
+        /*check if there's logged id*/
+        if (Auth::check()) {
+            $userId = Auth::user()->id;
+            $count = Cart::where('user_id', $userId)->count();
+
+            $carts = Cart::where('user_id', $userId)->get();
+        }
+        return  view('front-end.myCart', compact('count','carts'));
+    }
 }
