@@ -23,6 +23,7 @@
                                     <th>Price</th>
                                     <th>Image</th>
                                     <th>Status</th>
+                                    <th>Change Status</th>
 
                                 </tr>
                                 </thead>
@@ -41,7 +42,19 @@
                                                 No Image Available
                                             @endif
                                         </td>
-                                        <td>{{ $order->status }}</td>
+                                        <td>
+                                            @if($order->status  == 'in progress')
+                                                <span style="color: red">{{ $order->status }}</span>
+                                            @elseif($order->status  == 'On the  way')
+                                                <span style="color: blue">{{ $order->status }}</span>
+                                            @else
+                                                <span style="color: yellow">{{ $order->status }}</span>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            <a href="{{ route('on.the.way', $order->id) }}" class="btn btn-primary btn-sm">On the way</a>
+                                            <a href="{{ route('delivered', $order->id) }}" class="btn btn-success btn-sm">Delivered</a>
+                                        </td>
                                     </tr>
                                 @endforeach
                                 </tbody>

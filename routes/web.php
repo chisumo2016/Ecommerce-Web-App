@@ -36,6 +36,8 @@ Route::delete('/cart/{cart}', [CartController::class, 'destroy'])->middleware(['
 
 Route::post('confirm_order', [OrderController::class,'confirm_order'])->middleware(['auth','verified'])->name('confirm.order');
 Route::get('view_order', [\App\Http\Controllers\Admin\OrderController::class,'index'])->middleware(['auth','admin'])->name('orders.index');
+Route::get('on_the_way/{id}', [\App\Http\Controllers\Admin\OrderController::class,'OnTheWay'])->middleware(['auth','admin'])->name('on.the.way');
+Route::get('delivered/{id}', [\App\Http\Controllers\Admin\OrderController::class,'delivered'])->middleware(['auth','admin'])->name('delivered');
 
 
 

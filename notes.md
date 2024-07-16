@@ -240,5 +240,10 @@
         app/Http/Controllers/Admin/OrderController.php
         resources/views/admin/orders/
 
+# CHANGING ORDER  STATUS IN ADMIN PANEL
+        modified:   app/Http/Controllers/Admin/OrderController.php
+        modified:   resources/views/admin/orders/index.blade.php
+        modified:   routes/web.php
+
 
 

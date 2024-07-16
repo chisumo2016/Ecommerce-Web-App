@@ -16,4 +16,22 @@ class OrderController extends Controller
         $orders = order::all();
         return  view('admin.orders.index',  compact('orders'));
     }
+
+    public function OnTheWay($id)
+    {
+        $order = order::findOrFail($id);
+        $order->status  = 'On the  way';
+        $order->save();
+
+        return redirect('view_order');
+    }
+
+    public function delivered($id)
+    {
+        $order = order::findOrFail($id);
+        $order->status  = 'delivered';
+        $order->save();
+
+        return redirect('view_order');
+    }
 }
