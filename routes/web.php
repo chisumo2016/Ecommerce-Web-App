@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Front\HomeController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,7 +34,8 @@ Route::get('add_cart/{product}', [CartController::class,'cart'])->middleware(['a
 Route::get('mycart', [CartController::class,'myCart'])->middleware(['auth','verified'])->name('mycart');
 Route::delete('/cart/{cart}', [CartController::class, 'destroy'])->middleware(['auth','verified'])->name('cart.destroy');
 
-Route::post('confirm_order', [\App\Http\Controllers\OrderController::class,'confirm_order'])->middleware(['auth','verified'])->name('confirm.order');
+Route::post('confirm_order', [OrderController::class,'confirm_order'])->middleware(['auth','verified'])->name('confirm.order');
+Route::get('view_order', [\App\Http\Controllers\Admin\OrderController::class,'index'])->middleware(['auth','admin'])->name('orders.index');
 
 
 

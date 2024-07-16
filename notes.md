@@ -232,5 +232,13 @@
              app/Models/order.php
              database/migrations/2024_07_10_164435_create_orders_table.php
 
+# DISPLAY ORDER DATA IN ADMIN PANEL
+        modified:   app/Models/order.php
+        modified:   notes.md
+        modified:   resources/views/admin/partials/_sidebar.blade.php
+        modified:   routes/web.php
+        app/Http/Controllers/Admin/OrderController.php
+        resources/views/admin/orders/
+
 
 

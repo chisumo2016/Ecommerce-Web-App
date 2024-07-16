@@ -26,5 +26,12 @@
             </ul>
         </li>
 
+        <li>
+            <a href="{{  route('orders.index') }}">
+                <i class="icon-grid"></i>
+                Orders
+            </a>
+        </li>
+
     </ul>
 </nav>
