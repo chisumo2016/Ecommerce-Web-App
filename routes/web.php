@@ -31,7 +31,9 @@ Route::get('search' , [ProductController::class, 'search'])->name('search');
 
 Route::get('add_cart/{product}', [CartController::class,'cart'])->middleware(['auth','verified'])->name('add.cart');
 Route::get('mycart', [CartController::class,'myCart'])->middleware(['auth','verified'])->name('mycart');
-Route::delete('/cart/{cart}', [CartController::class, 'destroy'])->name('cart.destroy');
+Route::delete('/cart/{cart}', [CartController::class, 'destroy'])->middleware(['auth','verified'])->name('cart.destroy');
+
+Route::post('confirm_order', [\App\Http\Controllers\OrderController::class,'confirm_order'])->middleware(['auth','verified'])->name('confirm.order');
 
 
 

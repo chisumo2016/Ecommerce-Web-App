@@ -3,13 +3,30 @@
 @section('master')
     <section class="shop_section layout_padding">
         <div class="container">
-            <div class="heading_container heading_center">
-                <h2>
-                    Latest Products
-                </h2>
-            </div>
+
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-5">
+                    <form action="{{ route('confirm.order') }}" method="post">
+                        @csrf
+                        <div class="form-group">
+                            <label class="form-control-label">Receiver Name</label>
+                            <input type="text" placeholder="Name"  name="name" class="form-control" value="{{ Auth::user()->name }}">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label">Receiver Address</label>
+                            <textarea name="address" id="" cols="30" rows="10" class="form-control">{{ Auth::user()->address }}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label">Phone</label>
+                            <input type="text" name="phone" placeholder="Enter Your Telephone Number" class="form-control" value="{{ Auth::user()->phone }}">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" value="Place Order" class="btn btn-primary">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
                     <table class="table">
                         <thead>
                         <tr>
@@ -45,13 +62,16 @@
                             @endforeach
                         </tbody>
                     </table>
-                </div>
-                <div class="text-center" style="width: 100%; text-align: center; margin-top: 20px;">
-                    <h3>Total Value of Cart is ${{ $value }}</h3>
+
+                    <div class="text-center" style="width: 100%; text-align: center; margin-top: 20px;">
+                        <h3>Total Value of Cart is ${{ $value }}</h3>
+                    </div>
                 </div>
             </div>
         </div>
 
     </section>
 @endsection
+
+ 6
 

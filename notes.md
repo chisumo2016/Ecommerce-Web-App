@@ -189,4 +189,48 @@
         modified:   resources/views/front-end/myCart.blade.php
         modified:   routes/web.php
 
+# HOW TO MOVE  CART DATA TO ORDER TABLE
+    - Create  the order table 
+        php  artisan make:model order -mc
+
+            public function confirm_order(Request $request)
+    {
+        $name = $request->name;
+        $address = $request->address;
+        $phone = $request->phone;
+
+        $userId = Auth::user()->id;
+        $carts  = Cart::where('user_id', $userId)->get();
+
+        foreach ($carts   as $cart){
+
+            $order = new Order;
+            $order->name = $name;
+            $order->shipping_address = $address;
+            $order->phone = $phone;
+            $order->user_id = $userId;
+            $order->product_id = $cart->product_id;
+
+            $order->save();
+        }
+
+        $cart_remove = Cart::where('user_id', $userId)->get();
+
+        foreach ($cart_remove  as $remove){
+            $data = Cart::find($remove->id);
+            $data->delete();
+        }
+
+        Flasher::addSuccess('Product Ordered  successfully.');
+        return redirect()->back();
+    }
+
+             modified:   notes.md
+             modified:   resources/views/front-end/myCart.blade.php
+             modified:   routes/web.php
+             app/Http/Controllers/OrderController.php
+             app/Models/order.php
+             database/migrations/2024_07_10_164435_create_orders_table.php
+
+
 
