@@ -15,13 +15,13 @@ class OrderController extends Controller
     public function index()
     {
         $orders = order::all();
-        return  view('admin.orders.index',  compact('orders'));
+        return view('admin.orders.index', compact('orders'));
     }
 
     public function OnTheWay($id)
     {
         $order = order::findOrFail($id);
-        $order->status  = 'On the  way';
+        $order->status = 'On the  way';
         $order->save();
 
         return redirect('view_order');
@@ -30,7 +30,7 @@ class OrderController extends Controller
     public function delivered($id)
     {
         $order = order::findOrFail($id);
-        $order->status  = 'delivered';
+        $order->status = 'delivered';
         $order->save();
 
         return redirect('view_order');
@@ -44,6 +44,7 @@ class OrderController extends Controller
         //dd($pdf);
         return $pdf->download('invoice.pdf');
     }
+
 }
 
 

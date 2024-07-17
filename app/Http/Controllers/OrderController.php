@@ -31,4 +31,18 @@ class OrderController extends Controller
         Flasher::addSuccess('Product Ordered  successfully.');
         return redirect()->back();
     }
+
+    public function myOrders()
+    {
+        $count = 0;
+        /*check if there's logged id*/
+        if (Auth::check()) {
+            $userId = Auth::user()->id;
+            $count = Cart::where('user_id', $userId)->get()->count();
+
+            $orders  = order::where('user_id', $userId)->get();
+        }
+        return view('front-end.order', compact('count','orders'));
+    }
+
 }

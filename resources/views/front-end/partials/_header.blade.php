@@ -36,6 +36,10 @@
             <div class="user_option">
                 @if (Route::has('login'))
                     @auth
+                        <!-- view Order customer -->
+                        <a href="{{ route('my.orders') }}">
+                            My Orders
+                        </a>
                         <!-- Shopping cart bag -->
                         <a href="{{ route('mycart') }}">
                             <i class="fa fa-shopping-bag" aria-hidden="true">({{ $count }})</i>

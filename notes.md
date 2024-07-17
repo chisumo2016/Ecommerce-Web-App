@@ -270,5 +270,25 @@
 	modified:   resources/views/admin/partials/_sidebar.blade.php
 	modified:   routes/web.php
 
+# DISPLAY ORDER DATA FROM A SPECIFIC USER IN HOME PAGE
+    - Customer to see their own orders once  the add into the cart.
+    - Login as the normal user 
+
+    modified:   app/Http/Controllers/Admin/OrderController.php
+	modified:   app/Http/Controllers/OrderController.php
+	modified:   notes.md
+	modified:   resources/views/front-end/partials/_header.blade.php
+	modified:   routes/web.php
+
+    resources/views/front-end/layouts/app.blade.php
+	resources/views/front-end/order.blade.php
+
+
+
+
+
+
+
+
 
 

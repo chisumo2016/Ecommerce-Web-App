@@ -14,6 +14,8 @@ Route::get('/',[HomeController::class, 'index'])->name('home');
 Route::get('/dashboard',   [HomeController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/view-product/{product}', [HomeController::class, 'show'])->name('product.details');
 
+
+
 //Route::get('/dashboard', function () {
 //    return view('front-end.index');
 //})->middleware(['auth', 'verified'])->name('dashboard');
@@ -41,6 +43,6 @@ Route::get('delivered/{id}', [\App\Http\Controllers\Admin\OrderController::class
 
 Route::get('pdf/{id}', [\App\Http\Controllers\Admin\OrderController::class,'pdf'])->middleware(['auth','admin'])->name('pdf');
 
-
+Route::get('/my-order',   [OrderController::class, 'myOrders'])->middleware(['auth', 'verified'])->name('my.orders');
 
 require __DIR__.'/auth.php';
