@@ -283,6 +283,18 @@
     resources/views/front-end/layouts/app.blade.php
 	resources/views/front-end/order.blade.php
 
+# HOW TO MAKE FORGOT AND RESET PASSWORD IN LARAVEL USING GMAIL
+    kyrs vfew ycee dyzg
+     SETUP GMAIL
+        MAIL_MAILER=smtp
+        MAIL_HOST=smtp.gmail.com
+        MAIL_PORT=465
+        MAIL_USERNAME=TEST@gmail.com
+        MAIL_PASSWORD=kyrsvfewyceedyzg   -> apps password
+        MAIL_ENCRYPTION=ssl
+        MAIL_FROM_ADDRESS="TEST@gmail.com"
+        MAIL_FROM_NAME="hallo"
+
 
 
 
