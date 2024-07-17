@@ -24,6 +24,7 @@
                                     <th>Image</th>
                                     <th>Status</th>
                                     <th>Change Status</th>
+                                    <th>Print PDF</th>
 
                                 </tr>
                                 </thead>
@@ -52,9 +53,12 @@
                                             @endif
                                         </td>
                                         <td>
-                                            <a href="{{ route('on.the.way', $order->id) }}" class="btn btn-primary btn-sm">On the way</a>
-                                            <a href="{{ route('delivered', $order->id) }}" class="btn btn-success btn-sm">Delivered</a>
+                                            <a href="{{ route('on.the.way', $order->id) }}" class="btn btn-primary ">On the way</a>
+                                            <a href="{{ route('delivered', $order->id) }}" class="btn btn-success ">Delivered</a>
                                         </td>
+                                          <td>
+                                              <a href="{{ route('pdf', $order->id) }}" class="btn btn-secondary">Print PDF</a>
+                                          </td>
                                     </tr>
                                 @endforeach
                                 </tbody>

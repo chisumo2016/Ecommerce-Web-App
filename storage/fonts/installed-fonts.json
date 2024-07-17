@@ -1,0 +1,13 @@
+{
+    "fontawesome": {
+        "normal": "fontawesome_normal_9ca63d0492fb26491fcf0d4329a60689"
+    },
+    "dark-dashboard": {
+        "normal": "dark_dashboard_normal_7430b441c175851214e5c5231633ab84"
+    },
+    "muli": {
+        "300": "\/Users\/developer\/Herd\/ecoommerce-web\/storage\/fonts\/muli_300_327813711659c2f62c95e8f3fee3e1c6",
+        "normal": "\/Users\/developer\/Herd\/ecoommerce-web\/storage\/fonts\/muli_normal_08ae51711ac331644a22af80f5557319",
+        "bold": "muli_bold_7011df49f6e372fa80ed1d66328744b9"
+    }
+}

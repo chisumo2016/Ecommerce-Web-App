@@ -39,6 +39,8 @@ Route::get('view_order', [\App\Http\Controllers\Admin\OrderController::class,'in
 Route::get('on_the_way/{id}', [\App\Http\Controllers\Admin\OrderController::class,'OnTheWay'])->middleware(['auth','admin'])->name('on.the.way');
 Route::get('delivered/{id}', [\App\Http\Controllers\Admin\OrderController::class,'delivered'])->middleware(['auth','admin'])->name('delivered');
 
+Route::get('pdf/{id}', [\App\Http\Controllers\Admin\OrderController::class,'pdf'])->middleware(['auth','admin'])->name('pdf');
+
 
 
 require __DIR__.'/auth.php';

@@ -1,0 +1,70 @@
+StartFontMetrics 4.1
+Notice Converted by PHP-font-lib
+Comment https://github.com/dompdf/php-font-lib
+EncodingScheme FontSpecific
+FontName dark-dashboard
+FontSubfamily dashboard
+UniqueID FontForge 2.0 : dark-dashboard : 12-10-2017
+FullName dark-dashboard
+Version Version 1.0
+PostScriptName dark-dashboard
+Weight Medium
+ItalicAngle 0
+IsFixedPitch true
+UnderlineThickness 0
+UnderlinePosition 0
+FontHeightOffset 90
+Ascender 1000
+Descender -2
+FontBBox -4 -2 1004 1000
+StartCharMetrics 50
+U 0 ; WX 1000 ; N .notdef ; G 0
+U 65 ; WX 1000 ; N line-chart ; G 28
+U 66 ; WX 1000 ; N log-out ; G 29
+U 67 ; WX 1000 ; N page ; G 30
+U 68 ; WX 1000 ; N log-out-1 ; G 31
+U 69 ; WX 1000 ; N bill ; G 32
+U 70 ; WX 1000 ; N check ; G 33
+U 71 ; WX 1000 ; N list ; G 34
+U 72 ; WX 1000 ; N padnote ; G 35
+U 73 ; WX 1000 ; N pencil-case ; G 36
+U 74 ; WX 1000 ; N user ; G 37
+U 75 ; WX 1000 ; N form-1 ; G 38
+U 76 ; WX 1000 ; N list-1 ; G 39
+U 77 ; WX 1000 ; N mail ; G 40
+U 78 ; WX 1000 ; N presentation-1 ; G 41
+U 79 ; WX 1000 ; N logout ; G 42
+U 80 ; WX 1000 ; N home ; G 43
+U 81 ; WX 1000 ; N windows ; G 44
+U 82 ; WX 1000 ; N chart ; G 45
+U 83 ; WX 1000 ; N flow-branch ; G 47
+U 84 ; WX 1000 ; N user-outline ; G 48
+U 85 ; WX 1000 ; N user-1 ; G 49
+U 97 ; WX 1000 ; N bars ; G 3
+U 98 ; WX 1000 ; N cloud ; G 4
+U 99 ; WX 1000 ; N computer ; G 5
+U 100 ; WX 1000 ; N contract ; G 6
+U 101 ; WX 1000 ; N controls ; G 7
+U 102 ; WX 1000 ; N dashboard ; G 8
+U 103 ; WX 1000 ; N email ; G 9
+U 104 ; WX 1000 ; N repo-forked ; G 46
+U 105 ; WX 1000 ; N info ; G 10
+U 106 ; WX 1000 ; N layers ; G 11
+U 107 ; WX 1000 ; N light-bulb ; G 12
+U 108 ; WX 1000 ; N paper-and-pencil ; G 13
+U 109 ; WX 1000 ; N pie-chart ; G 14
+U 110 ; WX 1000 ; N pie-chart-1 ; G 15
+U 111 ; WX 1000 ; N presentation ; G 16
+U 112 ; WX 1000 ; N settings ; G 17
+U 113 ; WX 1000 ; N settings-1 ; G 18
+U 114 ; WX 1000 ; N three-cells ; G 19
+U 115 ; WX 1000 ; N writing-whiteboard ; G 20
+U 116 ; WX 1000 ; N magnifying-glass-browser ; G 21
+U 117 ; WX 1000 ; N new-file ; G 22
+U 118 ; WX 1000 ; N close ; G 23
+U 119 ; WX 1000 ; N flask ; G 24
+U 120 ; WX 1000 ; N grid ; G 25
+U 121 ; WX 1000 ; N picture ; G 26
+U 122 ; WX 1000 ; N website ; G 27
+EndCharMetrics
+EndFontMetrics

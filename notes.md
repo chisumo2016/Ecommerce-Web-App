@@ -245,5 +245,24 @@
         modified:   resources/views/admin/orders/index.blade.php
         modified:   routes/web.php
 
+# HOW TO PRINT & DOWNLOAD PDF FROM DATABASE TABLE.
+    https://github.com/barryvdh/laravel-dompdf
+        composer require barryvdh/laravel-dompdf
+            php artisan vendor:publish --provider="Barryvdh\DomPDF\ServiceProvider"
+
+    modified:   app/Http/Controllers/Admin/OrderController.php
+	modified:   composer.json
+	modified:   composer.lock
+	modified:   notes.md
+	modified:   resources/views/admin/orders/index.blade.php
+	modified:   routes/web.php
+
+    config/dompdf.php
+	resources/views/admin/invoice.blade.php
+	storage/fonts/
+
+
+
+
 
 

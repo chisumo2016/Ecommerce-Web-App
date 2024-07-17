@@ -8,6 +8,7 @@ use App\Models\order;
 use Flasher\Laravel\Facade\Flasher;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class OrderController extends Controller
 {
@@ -34,4 +35,15 @@ class OrderController extends Controller
 
         return redirect('view_order');
     }
+
+    public function pdf($id)
+    {
+        $data = order::findOrFail($id);
+        $pdf = Pdf::loadView('admin.invoice', compact('data'));
+
+        //dd($pdf);
+        return $pdf->download('invoice.pdf');
+    }
 }
+
+
