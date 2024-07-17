@@ -261,8 +261,14 @@
 	resources/views/admin/invoice.blade.php
 	storage/fonts/
 
+# DISPLAY TOTAL COUNT  OF DATA IN ADMIN  HOME
+    http://ecoommerce-web.test/admin/dashboard
 
-
+    modified:   app/Http/Controllers/Admin/DashboardController.php
+	modified:   notes.md
+	modified:   resources/views/admin/index.blade.php
+	modified:   resources/views/admin/partials/_sidebar.blade.php
+	modified:   routes/web.php
 
 
 

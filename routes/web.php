@@ -24,7 +24,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('admin/dashboard', [DashboardController::class, 'index'])->middleware(['auth','admin']);
+Route::get('admin/dashboard', [DashboardController::class, 'index'])->middleware(['auth','admin'])->name('admin.dashboard');
 Route::resource('admin/categories', CategoryController::class)->middleware(['auth','admin']);
 Route::resource('admin/products', ProductController::class)->middleware(['auth','admin']);
 
