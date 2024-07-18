@@ -54,7 +54,6 @@ class StripePaymentController extends Controller
                     'shipping_address' => $user->shipping_address,
                     'phone' => $user->phone,
                     'user_id' => $userId,
-                    //'status' => $user->status,
                     'product_id' => $cart->product_id,
                     'payment_status' => "paid"
                 ]);
@@ -70,7 +69,7 @@ class StripePaymentController extends Controller
             Session::flash('error', 'Payment failed: '.$e->getMessage());
         }
 
-        return back();
+        return  redirect('mycart');
     }
 
 }

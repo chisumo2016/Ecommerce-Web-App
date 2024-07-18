@@ -16,6 +16,7 @@ class order extends Model
         'phone',
         'user_id',
         'product_id',
+        'payment_status'
     ];
 
     public function user(): HasOne

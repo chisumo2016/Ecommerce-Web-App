@@ -315,7 +315,16 @@
             php artisan make:migration add_payment_status_to_orders_table --table=orders
     https://www.itsolutionstuff.com/post/laravel-9-stripe-payment-gateway-integration-tutorialexample.html
 
+         modified:   app/Models/User.php
+        modified:   composer.json
+        modified:   composer.lock
+        modified:   notes.md
+        modified:   resources/views/front-end/myCart.blade.php
+        modified:   routes/web.php
 
+            app/Http/Controllers/Admin/StripePaymentController.php
+            database/migrations/2024_07_17_211920_add_payment_status_to_orders_table.php
+            resources/views/front-end/stripe.blade.php
 
 
 
