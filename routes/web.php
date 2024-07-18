@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\CartController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\StripePaymentController;
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
@@ -44,5 +45,14 @@ Route::get('delivered/{id}', [\App\Http\Controllers\Admin\OrderController::class
 Route::get('pdf/{id}', [\App\Http\Controllers\Admin\OrderController::class,'pdf'])->middleware(['auth','admin'])->name('pdf');
 
 Route::get('/my-order',   [OrderController::class, 'myOrders'])->middleware(['auth', 'verified'])->name('my.orders');
+
+
+Route::controller(StripePaymentController::class)->group(function(){
+    Route::get('stripe/{value}', 'stripe')->name('home.stripe');
+    Route::post('stripe/{value}', 'stripePost')->name('stripe.post');
+});
+
+//Route::post('/stripe', [StripePaymentController::class, 'stripePost'])->name('stripe.post');
+
 
 require __DIR__.'/auth.php';

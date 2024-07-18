@@ -295,9 +295,25 @@
         MAIL_FROM_ADDRESS="TEST@gmail.com"
         MAIL_FROM_NAME="hallo"
 
+# EMAIL VERIFICATION AFTER REGISTRATION IN LARAVEL
+    Open User Model
+     use Illuminate\Contracts\Auth\MustVerifyEmail;
+    implements
+        implements  MustVerifyEmail
+    Open env. file
+         MAIL_MAILER=smtp
+        MAIL_HOST=smtp.gmail.com
+        MAIL_PORT=465
+        MAIL_USERNAME=TEST@gmail.com
+        MAIL_PASSWORD=kyrsvfewyceedyzg   -> apps password
+        MAIL_ENCRYPTION=ssl
+        MAIL_FROM_ADDRESS="TEST@gmail.com"
+        MAIL_FROM_NAME="hallo"
 
-
-
+# HOW TO MAKE STRIPE PAYMENT INTEGRATION
+    Add payment status in orders table
+            php artisan make:migration add_payment_status_to_orders_table --table=orders
+    https://www.itsolutionstuff.com/post/laravel-9-stripe-payment-gateway-integration-tutorialexample.html
 
 
 
