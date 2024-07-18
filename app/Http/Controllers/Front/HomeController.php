@@ -35,4 +35,20 @@ class HomeController extends Controller
 
       return  view('front-end.show',compact('product','count'));
     }
+
+    public function shop()
+    {
+        $products = Product::all();
+
+        //dd($products);
+
+        $count = 0;
+
+        if (Auth::check()) {
+            $userId = Auth::user()->id;
+            $count = Cart::where('user_id', $userId)->count();
+        }
+
+        return view('front-end.shop',compact('products', 'count'));
+    }
 }

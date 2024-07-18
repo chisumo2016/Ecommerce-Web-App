@@ -326,6 +326,11 @@
             database/migrations/2024_07_17_211920_add_payment_status_to_orders_table.php
             resources/views/front-end/stripe.blade.php
 
+# CUSTOMIZE LOGIN AND REGISTER PAGE DESIGN 
 
+
+# How to Generate Unique Slug Automatically in Laravel
+    - Slug table column
+        php artisan make:migration add_slug_column_to_products_table --table=products
 
 

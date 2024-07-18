@@ -14,6 +14,7 @@ Route::get('/',[HomeController::class, 'index'])->name('home');
 
 Route::get('/dashboard',   [HomeController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/view-product/{product}', [HomeController::class, 'show'])->name('product.details');
+Route::get('shop', [HomeController::class, 'shop'])->name('shop');
 
 
 
@@ -29,7 +30,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('admin/dashboard', [DashboardController::class, 'index'])->middleware(['auth','admin'])->name('admin.dashboard');
 Route::resource('admin/categories', CategoryController::class)->middleware(['auth','admin']);
-Route::resource('admin/products', ProductController::class)->middleware(['auth','admin']);
+Route::resource('admin/products', ProductController::class) ->parameters(['products' => 'product:slug'])->middleware(['auth','admin']);
 
 Route::get('search' , [ProductController::class, 'search'])->name('search');
 

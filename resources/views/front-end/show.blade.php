@@ -5,7 +5,7 @@
         <div class="container">
             <div class="heading_container heading_center">
                 <h2>
-                    Latest Products
+                    Product Details
                 </h2>
             </div>
             <div class="row">
@@ -32,6 +32,11 @@
                             <div class="detail-box" style="padding: 15px;" >
 
                                 <h6>Description :{{ $product->description }}</span></h6>
+                            </div>
+
+                            <div class="detail-box" style="padding: 15px;" >
+
+                                <a href="{{ route('add.cart', $product) }}" class="btn btn-success">Add To Cart</a>
                             </div>
                         </div>
                     </div>

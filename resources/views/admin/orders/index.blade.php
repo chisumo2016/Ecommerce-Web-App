@@ -8,9 +8,6 @@
                 <div class="col-lg-12">
                     <div class="block margin-bottom-sm">
                         <div class="title"><strong>Orders</strong></div>
-                        <a href="#" class="btn btn-primary float-right">
-                            Add Orders
-                        </a>
 
                         <div class="table-responsive">
                             <table class="table">
@@ -22,6 +19,7 @@
                                     <th>Product Title</th>
                                     <th>Price</th>
                                     <th>Image</th>
+                                    <th>Payment Status</th>
                                     <th>Status</th>
                                     <th>Change Status</th>
                                     <th>Print PDF</th>
@@ -43,6 +41,7 @@
                                                 No Image Available
                                             @endif
                                         </td>
+                                        <td>{{ $order->payment_status }}</td>
                                         <td>
                                             @if($order->status  == 'in progress')
                                                 <span style="color: red">{{ $order->status }}</span>
